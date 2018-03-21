@@ -1,5 +1,6 @@
 <template>
     <div class="moreNews">
+        <h3 class="highLine">食品健康新闻</h3>
         <div class="gridlist-demo-container">
             <mu-grid-list class="gridlist-demo" cols=2 padding=15 cellHeight=170>
                 <mu-grid-tile v-for="(item, index) in news" :key="index">
@@ -64,8 +65,9 @@
         display:block;
         /*宽度要是能写成width:50%+20px就好了，不知道less能否这么写180310*/
         width:calc(50% + 20px);
-        margin:50px auto 0;
+        margin:0px auto;
         /*background:red;*/
+        padding-bottom:30px;
     }
     /*<mu-grid-list class="gridlist-demo" cols=2 padding=20>    这里的padding值能不能做成只中点padding的效果？180310 */
     .moreNews .gridlist-demo-container{
@@ -153,5 +155,12 @@
 
     .moreNews .mu-grid-tile-titlebar{
         visibility: hidden;
+    }
+    .highLine{
+        margin:30px auto;
+        height:50px;
+        width:200px;
+        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-weight: 300;
     }
 </style>

@@ -1,35 +1,39 @@
 <template>
-    <div id="roulette" class="cell" ref="contentCell">
-        <ul class="content" ref="content">
-            <li v-for="(item,index) in dinners" :key="index">
-                <div v-for="subitem in item.imgs">
-                    <img :src="subitem.imgSrc">
-                    <a class="foodDetail">
-                        <h2>{{subitem.foodName}}</h2>
-                        <strong>{{subitem.foodDetail}}</strong>
-                        <span>{{subitem.effect}}</span>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <div class="leftCurtain"></div>
-        <div class="rightCurtain"></div>
-        <div class="leftBtn" ref="leftbtn"></div>
-        <div class="rightBtn" ref="rightbtn"></div>
-        <div class="timeline" ref="timeline">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span class="timearea">早餐时间<p class="exactTime">4:00</p></span>
-            <span class="timearea">午餐时间<p class="exactTime">10:00</p></span>
-            <span class="timearea">下午茶时间<p class="exactTime">14:00</p></span>
-            <span class="timearea">晚餐时间<p class="exactTime">16:00</p></span>
-            <span class="timearea">夜宵时间<p class="exactTime">21:00</p></span>
-            <span><p class="exactTime">4:00</p></span>
-            <span></span>
-            <span></span>
+    <div>
+        <h3 class="highLine">今日午餐推荐</h3>
+        <div id="roulette" class="cell" ref="contentCell">
+            <ul class="content" ref="content">
+                <li v-for="(item,index) in dinners" :key="index">
+                    <div v-for="subitem in item.imgs">
+                        <img :src="subitem.imgSrc">
+                        <a class="foodDetail">
+                            <h2>{{subitem.foodName}}</h2>
+                            <strong>{{subitem.foodDetail}}</strong>
+                            <span>{{subitem.effect}}</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="leftCurtain"></div>
+            <div class="rightCurtain"></div>
+            <div class="leftBtn" ref="leftbtn"></div>
+            <div class="rightBtn" ref="rightbtn"></div>
+            <div class="timeline" ref="timeline">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="timearea">早餐时间<p class="exactTime">4:00</p></span>
+                <span class="timearea">午餐时间<p class="exactTime">10:00</p></span>
+                <span class="timearea">下午茶时间<p class="exactTime">14:00</p></span>
+                <span class="timearea">晚餐时间<p class="exactTime">16:00</p></span>
+                <span class="timearea">夜宵时间<p class="exactTime">21:00</p></span>
+                <span><p class="exactTime">4:00</p></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
+
 </template>
 <script>
     import testSrc from '../../assets/img/zzw_bg.png'
@@ -243,12 +247,11 @@
     }
 </script>
 
-<style>
+<style scoped>
     .cell{
-        position:relative;
         display:block;
         width:100%;
-        margin:50px auto 0;
+        margin:0px auto;
         background:white;
         position:relative;
         overflow: hidden;
@@ -386,4 +389,11 @@
         padding-left:15px;
         margin:5px 0px;
     }
+    .highLine{
+             margin:30px auto;
+             height:50px;
+             width:200px;
+        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-weight: 300;
+         }
 </style>

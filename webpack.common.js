@@ -29,6 +29,12 @@ module.exports = {
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: 'common' // 指定公共 bundle 的名称。
         // })
+
+        //下面是导入jquery的方式180321
+        new webpack.ProvidePlugin({
+            jQuery: "jquery",
+            $: "jquery"
+        }),
     ],
     module: {
         rules: [

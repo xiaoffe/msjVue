@@ -1,24 +1,28 @@
 <template>
-    <div class="moreMetarial">
-        <div class="content">
-            <ul class="category">
-                <li @mouseenter="hoverChange(index)" v-for="(item,index) in metarials" :key="index" :class="{'actived': index === categoryIndex}">
-                    {{item.category}}
-                </li>
-            </ul>
-            <ul class="picList">
-                <li v-for="(item,index) in metarials[categoryIndex].imgs" :key="index">
-                    <img :src="item.imgSrc">
-                    <div class="underWhite">
-                        <span class="notz"></span><strong>{{item.foodName}}</strong>
-                    </div>
-                </li>
+    <div>
+        <h3 class="highLine">食材料理</h3>
+        <div class="moreMetarial">
+            <div class="content">
+                <ul class="category">
+                    <li @mouseenter="hoverChange(index)" v-for="(item,index) in metarials" :key="index" :class="{'actived': index === categoryIndex}">
+                        {{item.category}}
+                    </li>
+                </ul>
+                <ul class="picList">
+                    <li v-for="(item,index) in metarials[categoryIndex].imgs" :key="index">
+                        <img :src="item.imgSrc">
+                        <div class="underWhite">
+                            <span class="notz"></span><strong>{{item.foodName}}</strong>
+                        </div>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
+
 </template>
-<script>
+<script scoped>
     export default {
         props: {
             metarials: {
@@ -50,7 +54,7 @@
         position:relative;
         display:block;
         width:50%;
-        margin:50px auto 50px;
+        margin:0px auto;
         background: white;
     }
     .moreMetarial div.content{
@@ -126,5 +130,12 @@
         transform:translate(0%,-50%);
         font-size: 10px;
         font-weight: 100;
+    }
+    .highLine{
+        margin:30px auto;
+        height:50px;
+        width:200px;
+        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-weight: 300;
     }
 </style>

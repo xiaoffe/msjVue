@@ -4,7 +4,6 @@
         <MoreMenu v-bind:moremenus="moreMenus"></MoreMenu>
         <MoreMetarial v-bind:metarials="metarials"></MoreMetarial>
         <MoreNews v-bind:news="newsList"></MoreNews>
-        <div>sdfsdf</div>
     </div>
 </template>
 <script scoped>

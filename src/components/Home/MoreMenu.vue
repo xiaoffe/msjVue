@@ -1,5 +1,6 @@
 <template>
     <div class="menuContainer">
+        <h3 class="highLine">今日菜单推荐</h3>
         <div class="moreMenu">
             <el-carousel indicator-position="outside" arrow="always" trigger="click" ref="menuCarousel">
                 <el-carousel-item v-for="(item,index) in moremenus" :key="index">
@@ -44,7 +45,7 @@
         position:relative;
         display:block;
         width:50%;
-        margin:50px auto 0;
+        margin:0px auto;
     }
     .moreMenu .leftCover{
         position:absolute;
@@ -190,5 +191,12 @@
         text-overflow: ellipsis;
         white-space:nowrap;
         overflow:hidden;
+    }
+    .highLine{
+        margin:30px auto;
+        height:50px;
+        width:200px;
+        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-weight: 300;
     }
 </style>

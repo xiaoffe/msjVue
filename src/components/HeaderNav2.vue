@@ -39,7 +39,10 @@
                 this.todoId = id
                 this.$router.push(router)
             },
-        }
+        },
+        mounted(){
+            this.goList(0,'home')
+        },
     }
 </script>
 <style scoped>

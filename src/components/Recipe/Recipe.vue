@@ -1,6 +1,6 @@
 <template>
-    <div>
-        现在是{{message}}页面
+    <div class="bb">
+        <h1>现在是{{message}}页面</h1>
         <div class="moreMenu2">
             <el-carousel indicator-position="outside">
                 <el-carousel-item v-for="item in 4" :key="item">
@@ -17,6 +17,12 @@
             return {
                 message: '菜单'
             }
+        },
+        mounted(){
+            console.log("life","mounted")
+        },
+        created(){
+            console.log("life","created")
         }
     }
 </script>
@@ -42,4 +48,8 @@
     .el-carousel__item:nth-child(2n+1) {
         background-color: #d3dce6;
     }
+    .bb{
+        height:600px;
+    }
+
 </style>
