@@ -1,23 +1,21 @@
 <template>
-    <div>
+    <div class="moreMetarial">
         <h3 class="highLine">食材料理</h3>
-        <div class="moreMetarial">
-            <div class="content">
-                <ul class="category">
-                    <li @mouseenter="hoverChange(index)" v-for="(item,index) in metarials" :key="index" :class="{'actived': index === categoryIndex}">
-                        {{item.category}}
-                    </li>
-                </ul>
-                <ul class="picList">
-                    <li v-for="(item,index) in metarials[categoryIndex].imgs" :key="index">
-                        <img :src="item.imgSrc">
-                        <div class="underWhite">
-                            <span class="notz"></span><strong>{{item.foodName}}</strong>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
+        <div class="content">
+            <ul class="category">
+                <li @mouseenter="hoverChange(index)" v-for="(item,index) in metarials" :key="index"
+                    :class="{'actived': index === categoryIndex}">
+                    {{item.category}}
+                </li>
+            </ul>
+            <ul class="picList">
+                <li v-for="(item,index) in metarials[categoryIndex].imgs" :key="index">
+                    <img :src="item.imgSrc">
+                    <div class="underWhite">
+                        <span class="notz"></span><strong>{{item.foodName}}</strong>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -53,21 +51,25 @@
     .moreMetarial{
         position:relative;
         display:block;
-        width:50%;
+        /*width:50%;*/
+        width:10rem;
         margin:0px auto;
-        background: white;
     }
     .moreMetarial div.content{
-        padding:15px;
+        /*padding:15px;*/
+        padding:0.15rem;
         font-size: 0;
+        background:white;
     }
     .moreMetarial div.content ul.category{
         list-style: none;
         padding-left:0;
-        font-size: 14px;
+        /*font-size: 14px;*/
+        font-size: 0.14rem;
     }
     .moreMetarial div.content ul.category li{
         padding:5px 15px;
+        padding:0.05rem 0.15rem;
         display: inline-block;
     }
     .moreMetarial div.content ul.category li > li{
@@ -101,18 +103,22 @@
     .moreMetarial div.content ul.picList li .underWhite{
         position: absolute;
         display: block;
-        height:25px;
+        /*height:25px;*/
+        height:0.25rem;
         width:100%;
         background:url(../../assets/img/white70.png);
         left:0;
         bottom:0;
-        font-size: 14px;
+        /*font-size: 14px;*/
+        font-size:0.14rem;
     }
     .notz {
         position: absolute;
         background: #999;
-        height: 10px;
-        width: 10px;
+        /*height: 10px;*/
+        height:0.1rem;
+        /*width: 10px;*/
+        widht:0.1rem;
         overflow: hidden;
         display: inline-block;
         vertical-align: top;
@@ -126,16 +132,19 @@
         display: inline-block;
         vertical-align: top;
         top:50%;
-        left:20px;
+        /*left:20px;*/
+        left:0.2rem;
         transform:translate(0%,-50%);
-        font-size: 10px;
+        /*font-size: 10px;*/
+        font-size: 0.1rem;
         font-weight: 100;
     }
     .highLine{
-        margin:30px auto;
-        height:50px;
-        width:200px;
-        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
-        font-weight: 300;
+        margin:0.35rem auto;
+        width:100%;
+        height:0.35rem;
+        color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-size:0.3rem;
+        font-weight: 100;
     }
 </style>

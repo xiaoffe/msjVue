@@ -1,7 +1,7 @@
 <template>
     <div class="menuContainer">
-        <h3 class="highLine">今日菜单推荐</h3>
         <div class="moreMenu">
+            <h3 class="highLine">今日菜单推荐</h3>
             <el-carousel indicator-position="outside" arrow="always" trigger="click" ref="menuCarousel">
                 <el-carousel-item v-for="(item,index) in moremenus" :key="index">
                     <div class="menuBox">
@@ -44,7 +44,7 @@
     .moreMenu{
         position:relative;
         display:block;
-        width:50%;
+        width:10rem;
         margin:0px auto;
     }
     .moreMenu .leftCover{
@@ -108,7 +108,6 @@
     }
     .moreMenu .el-carousel{
         overflow-x:visible;
-        /*overflow-x:hidden;*/
     }
 
     .moreMenu .el-carousel__indicators--outside button{
@@ -117,7 +116,8 @@
     }
 
     .moreMenu .el-carousel__indicators--outside{
-        bottom:26px;text-align:center;position:static;-webkit-transform:none;transform:none
+        text-align:center;position:static;-webkit-transform:none;transform:none;
+        bottom:0.26rem;
     }
 
     .moreMenu .el-carousel__indicators--outside .el-carousel__indicator:hover button{
@@ -131,8 +131,10 @@
     .moreMenu .el-carousel__button {
         display: block;
         opacity: .48;
-        width: 30px;
-        height: 5px;
+        /*width: 30px;*/
+        /*height: 5px;*/
+        width:0.3rem;
+        height:0.05rem;
         background-color: #fff;
         border: none;
         outline: 0;
@@ -144,7 +146,7 @@
     }
 
     .moreMenu .el-carousel__container{
-        height:550px;
+        height:5.5rem;
     }
 
     .moreMenu .menuBox{
@@ -169,34 +171,43 @@
         width:100%;
     }
     .moreMenu .fixer{
-        display:block;height:10px;width:100%;position:absolute;bottom:30%;left:0px;background:url(../../assets/img/ztfixer.gif) 0px 0px no-repeat;overflow:hidden;
+        display:block;
+        height:0.1rem;
+        width:100%;position:absolute;
+        bottom:0.916rem;
+        left:0px;background:url(../../assets/img/ztfixer.gif) 0px 0px no-repeat;overflow:hidden;
+        background-size:100% 0.1rem;
     }
     .moreMenu .innerBox .note{
-        display:block;height:30%;width:100%;position:absolute;bottom:0px;left:0px;background: #fff;
+        display:block;height:30%;
+        height:0.916rem;
+        width:100%;position:absolute;bottom:0px;left:0px;background: #fff;
     }
     .moreMenu .innerBox .note h2{
         font-family:Microsoft Yahei;
         font-weight: 400;
-        margin-top:10px;
-        margin-bottom:10px;
-        padding-left:25px;
+        font-size:0.2rem;
+        margin-top:0.1rem;
+        margin-bottom:0.1rem;
+        padding-left:0.25rem;
         color:#4A4A4A;
         text-overflow: ellipsis;
         white-space:nowrap;
         overflow:hidden;
     }
     .moreMenu .innerBox .note span{
-        font-size: smaller;
-        padding-left:25px;
+        font-size:0.1rem;
+        padding-left:0.25rem;
         text-overflow: ellipsis;
         white-space:nowrap;
         overflow:hidden;
     }
     .highLine{
-        margin:30px auto;
-        height:50px;
-        width:200px;
-        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
-        font-weight: 300;
+        margin:0.35rem auto;
+        width:100%;
+        height:0.35rem;
+        color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-size:0.3rem;
+        font-weight: 100;
     }
 </style>

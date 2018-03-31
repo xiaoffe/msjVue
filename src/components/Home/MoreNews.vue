@@ -1,23 +1,22 @@
 <template>
     <div class="moreNews">
         <h3 class="highLine">食品健康新闻</h3>
-        <div class="gridlist-demo-container">
-            <mu-grid-list class="gridlist-demo" cols=2 padding=15 cellHeight=170>
-                <mu-grid-tile v-for="(item, index) in news" :key="index">
-                    <div class="gridbox">
-                        <img :src="item.newsSrc[topicIndex[index].i].imgSrc" ref="newsImg"/>
-                        <div class="newsTitles">
-                            <ul>
-                                <li @mouseenter="newsHoverChange(index, subindex)" v-for="(subitem, subindex) in item.newsSrc">
-                                    <a :class="{'actived': subindex == topicIndex[index].i}">{{subitem.title}}</a>
-                                </li>
-                            </ul>
-                            <span>{{item.topic}}</span>
-                        </div>
+        <div class="gridlist-demo">
+            <div v-for="(item, index) in news" :key="index">
+                <div class="gridbox">
+                    <img :src="item.newsSrc[topicIndex[index].i].imgSrc" ref="newsImg"/>
+                    <div class="newsTitles">
+                        <ul>
+                            <li @mouseenter="newsHoverChange(index, subindex)" v-for="(subitem, subindex) in item.newsSrc">
+                                <a :class="{'actived': subindex == topicIndex[index].i}">{{subitem.title}}</a>
+                            </li>
+                        </ul>
+                        <span class="tt">{{item.topic}}</span>
                     </div>
-                </mu-grid-tile>
-            </mu-grid-list>
+                </div>
+            </div>
         </div>
+
     </div>
 </template>
 <script>
@@ -63,59 +62,54 @@
     .moreNews{
         position:relative;
         display:block;
-        /*宽度要是能写成width:50%+20px就好了，不知道less能否这么写180310*/
-        width:calc(50% + 20px);
+        width:10rem;
         margin:0px auto;
-        /*background:red;*/
-        padding-bottom:30px;
+        padding-bottom:0.5rem;
     }
-    /*<mu-grid-list class="gridlist-demo" cols=2 padding=20>    这里的padding值能不能做成只中点padding的效果？180310 */
-    .moreNews .gridlist-demo-container{
+    .moreNews .gridlist-demo{
+        flex-direction: row;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
+        width:10rem;
+        height:3.6rem;
 
-    .moreNews .gridlist-demo{
-        width:100%;
     }
     .moreNews .gridlist-demo .gridbox{
         position: relative;
-        height:100%;
-        /*background: blue;*/
+        height:1.6rem;
+        width:4.8rem;
         font-size: 0;
         padding-top:5px;
     }
 
     .moreNews .gridlist-demo .gridbox img{
-        height:100%;
-        width: 35%;
-        /*//去掉这个padding-left，你会发现 当上面的moreMaterail滑动时，这里的moreNews的左边两个img边缘会迷之闪动180314*/
+        height:1.6rem;
+        width: 1.6rem;
         padding-left:1px;
-        /*同理，看less能否使得宽和高度值相等*/
         display: inline-block;
         vertical-align:top;
     }
     .moreNews .gridlist-demo .gridbox div.newsTitles{
         position:relative;
-        font-size:10px;
-        height:100%;
-        width: 65%;
+        height:1.6rem;
+        width: 3.2rem;
         background:white;
         display: inline-block;
     }
 
-    .moreNews .gridlist-demo .gridbox div.newsTitles span {
+    .moreNews .gridlist-demo .gridbox div.newsTitles span.tt {
+        font-size: 0.1rem;
         display:block;
-        padding:5px 10px;
+        padding:0.05rem 0.1rem;
         position: absolute;
         background-color:#60A531;
-        right:15px;
-        top:-5px;
+        right:0.15rem;
+        top:-0.05rem;
         color:white;
     }
     .moreNews .gridlist-demo .gridbox div.newsTitles ul{
-        height:100%;
+        height:1.6rem;
         list-style: none;
         padding-left: 0;
         margin-left:5px;
@@ -125,21 +119,21 @@
         position: relative;
         display: block;
         height:33.33%;
-        /*background: gray;*/
-        font-size: 14px;
+        font-size: 0.16rem;
         font-weight: 100;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
     }
     .moreNews .gridlist-demo .gridbox div.newsTitles ul li + li{
         border-top:1px solid #d8d8d8;
     }
     .moreNews .gridlist-demo .gridbox div.newsTitles ul li a{
-        position: absolute;
-        top:50%;
-        transform:translate(10%,-50%);
+        /*position: absolute;*/
+        /*top:50%;*/
+        /*transform:translate(0%,-50%);*/
+        line-height: 0.5333rem;
         color: #555555;
-        text-overflow: ellipsis;
-        white-space:nowrap;
-        overflow:hidden;
     }
     .moreNews .gridlist-demo .gridbox div.newsTitles ul li a.actived{
         text-decoration: underline;
@@ -157,10 +151,11 @@
         visibility: hidden;
     }
     .highLine{
-        margin:30px auto;
-        height:50px;
-        width:200px;
-        font-size:24px;color:#222;text-align:center;font-family:Microsoft Yahei;
-        font-weight: 300;
+        margin:0.35rem auto;
+        width:100%;
+        height:0.35rem;
+        color:#222;text-align:center;font-family:Microsoft Yahei;
+        font-size:0.3rem;
+        font-weight: 100;
     }
 </style>
