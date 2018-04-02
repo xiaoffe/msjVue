@@ -1,0 +1,182 @@
+$dinnerBtnImgSrc:'../../assets/img/zzw_bg.png';
+$keduImgSrc:'../../assets/img/kedulong.gif';
+$whiteSrc:'../../assets/img/white70.png';
+.cell{
+  display:block;
+  width:10rem;
+  margin:0px auto;
+  background:white;
+  position:relative;
+  overflow: visible;
+  .leftCurtain {
+    left: -50%;
+    top: 0;
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    filter: Alpha(Opacity=50); /*IE*/
+    -moz-opacity: 0.5; /*FF*/
+    opacity: 0.5;
+  }
+  .rightCurtain {
+    right: -50%;
+    top: 0;
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    filter: Alpha(Opacity=50); /*IE*/
+    -moz-opacity: 0.5; /*FF*/
+    opacity: 0.5;
+  }
+  .leftBtn {
+    display: block;
+    height: 72px;
+    width: 173px;
+    height:0.72rem;
+    width:1.73rem;
+    position: absolute;
+    background: url($dinnerBtnImgSrc) -0rem -1.41rem no-repeat;
+    background-size:3.47rem 4.37rem;
+    top: 35%;
+    left: -0.3rem;
+    /*transform: translate(250%, -50%);*/
+    opacity: 0;
+  }
+  .rightBtn {
+    display: block;
+    height: 72px;
+    width: 173px;
+    height:0.72rem;
+    width:1.73rem;
+    position: absolute;
+    background: url($dinnerBtnImgSrc) -1.75rem -1.41rem no-repeat;
+    background-size:3.47rem 4.37rem;
+    top: 35%;
+    right: -0.3rem;
+    /*transform: translate(-250%, -50%);*/
+    opacity: 0;
+  }
+}
+.inMid{
+  display:block;
+  width:10rem;
+  margin:0px auto;
+  position:relative;
+  overflow: visible;
+}
+ul.content{
+  position: relative;
+  left: -20rem;top: 0;margin: 0;padding: 0;
+  width:50rem;
+  height:3.333rem;
+  font-size:0;
+  li {
+    position: absolute;
+    display: inline-block;
+    list-style: none;
+    width: 10rem;
+    height: 100%;
+    div {
+      position: relative;
+      width: 33.33%;
+      height: 100%; /*一层一层的把height的100%值写出来，（img适应div）才起作用 180224*/
+      display: inline-block;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.timeline {
+  position: relative;
+  /*left: -5%;*/
+  left:-6rem;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 110%;
+  width:22rem;;
+  height: 50px;
+  height:0.5rem;
+  font-size: 0;
+  span {
+    display: inline-block;
+    position: relative;
+    background: #fff url($keduImgSrc) 0px 0px repeat-x;
+    overflow: hidden;
+    width: 9.09%;
+    height: 100%;
+    width:2rem;
+    font-size: 14px;
+    font-size:0.14rem;
+    border-top: 0.04rem solid gray;
+    vertical-align: top;
+    line-height: 0.5rem;
+    text-align: center;
+    overflow: visible;
+    &.timearea {
+      border-top: 4px solid gray;
+      color: #fff;
+      font-weight: 900;
+    }
+    p.exactTime {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: gray;
+
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      /*上面这一段使用居中的完美解决办法（向左偏移量考量的基准是自身的width）*/
+    }
+  }
+}
+
+.foodDetail {
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: url($whiteSrc) repeat;
+  left: 0px;
+  bottom: 0px;
+  font-size: 14px;
+  font-size:0.14rem;
+  span {
+    display: block;
+    padding: 5px 10px;
+    padding:0.05rem 0.1rem;
+    position: absolute;
+    background-color: #60A531;
+    right: 10px;
+    top: -5px;
+    right:0.1rem;
+    top:-0.05rem;
+    color: white;
+  }
+  h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+    font-size:0.24rem;
+    font-family: Microsoft Yahei;
+    padding-left: 15px;
+    padding-left:0.15rem;
+    margin-bottom: 0;
+  }
+  strong {
+    line-height: 18px;
+    line-height:0.18rem;
+    color: #666;
+    padding-left: 15px;
+    padding-left:0.15rem;
+    margin: 5px 0px;
+    margin:0.05rem 0;
+  }
+}

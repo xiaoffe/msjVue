@@ -6,7 +6,7 @@
         <MoreNews v-bind:news="newsList"></MoreNews>
     </div>
 </template>
-<script scoped>
+<script>
     import testSrc from '../../assets/img/zzw_bg.png'
     import MoreMetarial from './MoreMetarial'
     import MoreMenu from './MoreMenu'
@@ -61,6 +61,6 @@
         }
     }
 </script>
-<style>
-
+<style lang="scss">
+    @import "../../sass/components/home/hometest";
 </style>

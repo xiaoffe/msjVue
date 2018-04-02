@@ -1,0 +1,80 @@
+.moreMetarial{
+  position:relative;
+  display:block;
+  width:10rem;
+  margin:0px auto;
+  div.content{
+    padding:0.15rem;
+    font-size: 0;
+    background:white;
+    ul.category{
+      list-style: none;
+      padding-left:0;
+      font-size: 0.14rem;
+      li{
+        padding:5px 15px;
+        padding:0.05rem 0.15rem;
+        display: inline-block;
+        &.actived{
+          background: red;
+          color:white;
+        }
+      }
+    }
+    ul.picList{
+      list-style: none;
+      padding-left:0;
+      li{
+        position: relative;
+        display: inline-block;
+        width:12.5%;
+        img{
+          display: block;
+          width:99%;
+          padding:0.5%;
+        }
+        & .underWhite{
+          position: absolute;
+          display: block;
+          /*height:25px;*/
+          height:0.25rem;
+          width:100%;
+          //background:url(../../../assets/img/white70.png);
+          background:rgba(255,255,255,0.7);
+          left:0;
+          bottom:0;
+          /*font-size: 14px;*/
+          font-size:0.14rem;
+        }
+      }
+    }
+  }
+}
+
+.notz {
+  position: absolute;
+  background: #999;
+  /*height: 10px;*/
+  height:0.1rem;
+  /*width: 10px;*/
+  widht:0.1rem;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  top:50%;
+  left:0%;
+  transform:translate(50%,-50%);
+}
+.underWhite strong{
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  top:50%;
+  /*left:20px;*/
+  left:0.2rem;
+  transform:translate(0%,-50%);
+  /*font-size: 10px;*/
+  font-size: 0.1rem;
+  font-weight: 100;
+}

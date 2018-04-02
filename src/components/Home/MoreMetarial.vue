@@ -20,7 +20,7 @@
     </div>
 
 </template>
-<script scoped>
+<script>
     export default {
         props: {
             metarials: {
@@ -46,105 +46,6 @@
     }
 </script>
 
-
-<style>
-    .moreMetarial{
-        position:relative;
-        display:block;
-        /*width:50%;*/
-        width:10rem;
-        margin:0px auto;
-    }
-    .moreMetarial div.content{
-        /*padding:15px;*/
-        padding:0.15rem;
-        font-size: 0;
-        background:white;
-    }
-    .moreMetarial div.content ul.category{
-        list-style: none;
-        padding-left:0;
-        /*font-size: 14px;*/
-        font-size: 0.14rem;
-    }
-    .moreMetarial div.content ul.category li{
-        padding:5px 15px;
-        padding:0.05rem 0.15rem;
-        display: inline-block;
-    }
-    .moreMetarial div.content ul.category li > li{
-        padding-left:0;
-        padding-right: 0;
-        margin-left:0;
-        margin-right:0;
-    }
-    /*.moreMetarial div.content ul.category li:hover{*/
-    /*background:#ff3232;*/
-    /*color:white;*/
-    /*}*/
-    .moreMetarial div.content ul.category li.actived{
-        background: red;
-        color:white;
-    }
-    .moreMetarial div.content ul.picList{
-        list-style: none;
-        padding-left:0;
-    }
-    .moreMetarial div.content ul.picList li{
-        position: relative;
-        display: inline-block;
-        width:12.5%;
-    }
-    .moreMetarial div.content ul.picList li img{
-        display: block;
-        width:99%;
-        padding:0.5%;
-    }
-    .moreMetarial div.content ul.picList li .underWhite{
-        position: absolute;
-        display: block;
-        /*height:25px;*/
-        height:0.25rem;
-        width:100%;
-        background:url(../../assets/img/white70.png);
-        left:0;
-        bottom:0;
-        /*font-size: 14px;*/
-        font-size:0.14rem;
-    }
-    .notz {
-        position: absolute;
-        background: #999;
-        /*height: 10px;*/
-        height:0.1rem;
-        /*width: 10px;*/
-        widht:0.1rem;
-        overflow: hidden;
-        display: inline-block;
-        vertical-align: top;
-        top:50%;
-        left:0%;
-        transform:translate(50%,-50%);
-    }
-    .underWhite strong{
-        position: absolute;
-        overflow: hidden;
-        display: inline-block;
-        vertical-align: top;
-        top:50%;
-        /*left:20px;*/
-        left:0.2rem;
-        transform:translate(0%,-50%);
-        /*font-size: 10px;*/
-        font-size: 0.1rem;
-        font-weight: 100;
-    }
-    .highLine{
-        margin:0.35rem auto;
-        width:100%;
-        height:0.35rem;
-        color:#222;text-align:center;font-family:Microsoft Yahei;
-        font-size:0.3rem;
-        font-weight: 100;
-    }
+<style lang="scss">
+    @import "../../sass/components/home/more_metarial";
 </style>
