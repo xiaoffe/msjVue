@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderBar></HeaderBar>
-    <HeaderNav2></HeaderNav2>
+    <HeaderNav></HeaderNav>
     <FooterUs></FooterUs>
     <!--<img src="../assets/rabbit.png">-->
     <!--<router-link to="/welcome" class="hhh">点我一下</router-link>-->
@@ -10,12 +10,12 @@
 </template>
 <script>
     import HeaderBar from '../components/HeaderBar.vue'
-    import HeaderNav2 from '../components/HeaderNav2.vue'
+    import HeaderNav from '../components/HeaderNav.vue'
     import FooterUs from '../components/FooterUs.vue'
     export default {
         components: {
             HeaderBar,
-            HeaderNav2,
+            HeaderNav,
             FooterUs,
         },
         data() {

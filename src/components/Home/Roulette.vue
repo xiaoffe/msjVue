@@ -112,18 +112,18 @@
                         position: "-1.75rem -3.63rem"
                     }]
 
-                //在浏览器重新输入地址后，app.vue调节font-size没有起作用。故而拿一段放这里 代码耦合以后解决180331
-                let maxWidth = screen.width
-                let clientWidth = document.documentElement.clientWidth
-                if (!clientWidth) return
-                if (clientWidth >= maxWidth / 2) {
-                    clientWidth = maxWidth / 2
-                }
-                if (clientWidth <= 600) {
-                    clientWidth = 600
-                }
-                document.documentElement.style.fontSize = 100 * (clientWidth / 1000 ) + 'px'
-                //
+//                //在浏览器重新输入地址后，app.vue调节font-size没有起作用。故而拿一段放这里 代码耦合以后解决180331
+//                let maxWidth = screen.width
+//                let clientWidth = document.documentElement.clientWidth
+//                if (!clientWidth) return
+//                if (clientWidth >= maxWidth / 2) {
+//                    clientWidth = maxWidth / 2
+//                }
+//                if (clientWidth <= 600) {
+//                    clientWidth = 600
+//                }
+//                document.documentElement.style.fontSize = 100 * (clientWidth / 1000 ) + 'px'
+//                //
 
 
                 var cell = this.$refs.contentCell

@@ -1,0 +1,96 @@
+$header_bg:'../assets/img/header_bg.png';
+$login_icon:'../assets/img/topdsflogin_icon.gif';
+.HeaderBar {
+  /*height:129px;*/
+  background:#c90000 url($header_bg) center repeat-y;width:100%;position:relative;z-index:3000;
+  height:1.29rem;
+  img{
+    width:2.39rem;
+    height:1rem;
+  }
+  .headerBarContent{
+    height:100%;
+    width:10rem;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    .search{
+      position: relative;
+      /*width:450px;*/
+      width:4.5rem;
+      height:0.4rem;
+      background:white;
+      border-radius: 0.04rem ;
+      .searchInput{
+        position: absolute;
+        height:0.38rem;
+        width:100%;
+        font-size: 0.15rem;
+        border: none;
+        top:0.01rem;
+        left:0.01rem;
+        padding-left:0.1rem;
+      }
+      .searchSlot{
+        position: absolute;
+        color:white;
+        background:#a8000f;
+        /*letter-spacing: 4px;*/
+        letter-spacing: 0.04rem;
+        height:0.36rem;
+        width:0.8rem;
+        font-size: 0.15rem;
+        border: none;
+        top:0.02rem;
+        right:0.02rem;
+        &:hover{
+          background:#890511;
+        }
+      }
+    }
+  }
+}
+
+.loginList{
+  list-style: none;
+  color:white;
+  padding-left:0;
+  li{
+    /*padding-left:5px;*/
+    /*padding-right:5px;*/
+    display: inline-block;
+    font-size: small;
+    /*border-radius:4px;*/
+    padding-left:0.05rem;
+    padding-right:0.05rem;
+    border-radius:0.04rem;
+    &:hover{
+      text-decoration: underline;
+      cursor: pointer;
+      background:rgba(0,0,0,0.3);
+    }
+    a{
+      display:block;
+      /*height:30px;*/
+      /*line-height:30px;*/
+      height:0.3rem;
+      line-height:0.3rem;
+
+      &.header_wblogin {
+        /*padding-left: 34px;*/
+        padding-left:0.34rem;
+        background: url($login_icon) 0.03rem 0px no-repeat;
+        background-size: 0.28rem 0.56rem;
+      }
+      &.header_qqlogin {
+        /*padding-left: 34px;*/
+        padding-left:0.34rem;
+        background: url($login_icon) 0.03rem -0.28rem no-repeat;
+        background-size: 0.28rem 0.56rem;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ import Vue from 'vue' // 导入Vue
 import Router from 'vue-router' // 导入vue-router 库
 import Layouts from '../components/layouts' // 导入layouts.vue 组件
 import Welcome from '../components/welcome'
-import Home from '../components/Home/Home2'
+import Home from '../components/Home/Home'
 import Delicious from '../components/Delicious/Delicious'
 import Download from '../components/Download/Download'
 import Healthy from '../components/Healthy/Healthy'

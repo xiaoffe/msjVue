@@ -1,0 +1,81 @@
+$arrow_down:'../assets/img/arrow_down.gif';
+.headerNav {
+  /*-moz-box-shadow: 0px 0px 10px #888888; !* 老的 Firefox *!*/
+  /*box-shadow: 0px 0px 10px #888888;*/
+  -moz-box-shadow: 0px 0px 0.1rem #888888; /* 老的 Firefox */
+  box-shadow: 0px 0px 0.1rem #888888;
+  position: relative;
+  z-index: 1; /*z-index只影响有position值的元素*/
+}
+
+.hCenterBlock {
+  width: 1000px;
+  margin: 0px auto;
+  width: 10rem;
+}
+
+.navList {
+  list-style: none;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0;
+  a {
+    display: inline-block;
+    vertical-align: top;
+    /*height: 70px;*/
+    height: 0.7rem;
+    /*line-height: 67px;*/
+    line-height: 0.67rem;
+    /*font-size: 18px;*/
+    font-size: 0.18rem;
+    color: #444;
+    font-family: Microsoft Yahei, 黑体;
+    font-weight: bold;
+    position: relative;
+    img{
+      width:0.24rem;
+      height:0.23rem;
+    }
+    div {
+      /*margin: 0px 24px;*/
+      /*padding-top: 3px;*/
+      margin: 0 0.24rem;
+      padding-top: 0.03rem;
+    }
+    &:hover{
+      cursor: pointer;
+      background: #fafafa;
+      border-bottom: 3px solid #fafafa;
+    }
+    &.actived{
+      cursor: pointer;
+      background: #fafafa;
+      border-bottom: 3px solid #fafafa;
+      div {
+        background: #fafafa;
+        border-bottom: 3px solid red;
+      }
+    }
+  }
+}
+
+.hasMoreArrow {
+  background: url($arrow_down) right center no-repeat;
+  background-size:0.2rem 0.05rem;
+}
+
+.navImg {
+  position: absolute;
+  display: inline-block;
+  /*right: 7px;*/
+  right:0.07rem;
+  vertical-align: top;
+  /*top: 8px;*/
+  top:0.08rem;
+}
+
+.mainTheme {
+  padding-top: 5px;
+  background: #eddcbd;
+}
