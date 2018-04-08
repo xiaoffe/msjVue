@@ -7,11 +7,22 @@
     </div>
 </template>
 <script>
-    import testSrc from '../../assets/img/zzw_bg.png'
-    import MoreMetarial from './MoreMetarial'
-    import MoreMenu from './MoreMenu'
-    import MoreNews from './MoreNews'
-    import Roulette from './Roulette'
+//    import testSrc from '../../assets/img/zzw_bg.png'
+//    import MoreMetarial from './MoreMetarial'
+//    import MoreMenu from './MoreMenu'
+//    import MoreNews from './MoreNews'
+//    import Roulette from './Roulette'
+
+//    const MoreMetarial=()=> import('./MoreMetarial')
+//    const MoreMenu=()=>import('./MoreMenu')
+//    const MoreNews=()=>import('./MoreNews')
+//    const Roulette=()=>import('./Roulette')
+
+    const MoreMetarial = () => import(/* webpackChunkName: "router-home" */ './MoreMetarial')
+    const MoreMenu = () => import(/* webpackChunkName: "router-home" */ './MoreMenu')
+    const MoreNews = () => import(/* webpackChunkName: "router-home" */ './MoreNews')
+    const Roulette = () => import(/* webpackChunkName: "router-home" */ './Roulette')
+
     export default {
         components: {
             MoreMetarial,

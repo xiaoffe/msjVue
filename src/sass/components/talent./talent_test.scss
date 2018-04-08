@@ -1,0 +1,41 @@
+@import "../math/math";
+$direction: (n:270deg, ne:315deg, e:0deg, se:45deg, s:90deg, sw:135deg, w:180deg, nw: 225deg);
+
+@mixin dragger-position($angle) {
+  left:100px + cos($angle) * 100px;
+  top:100px + sin($angle) * 100px;
+  transform: translate(-50%, -50%);
+}
+
+.dragger{
+  position: relative;
+  width:200px;
+  height:200px;
+  background-color: white;
+  border-radius: 200px;
+  left:200px;
+  text-align: center;
+  @each $dir, $angle in $direction{
+    .#{$dir}-dragger{
+      position: absolute;
+      width:20px;
+      height:20px;
+      border-radius: 20px;
+      font-size: 10px;
+      text-align: center;
+      color: white;
+      background-color: #60A531;
+      cursor:#{$dir}-resize;
+      visibility: hidden;
+
+      @include dragger-position($angle);
+    }
+  }
+  &:hover{
+    @each $dir, $angle in $direction{
+      .#{$dir}-dragger{
+        visibility: visible;
+      }
+    }
+  }
+}
