@@ -53,6 +53,7 @@
                     imgSrc: '',
                     router: 'download'
                 }]
+
         },
         methods: {
             goList(id, router) { // 点击菜单时候,替换选中id
@@ -61,7 +62,8 @@
             },
         },
         mounted(){
-            this.goList(0, 'home')
+//            this.goList(0, 'home')
+            this.$router.replace('home')
         },
     }
 </script>
